@@ -1,78 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bonang Matheba — Full Landing Page</title>
-  <link rel="stylesheet" href="src/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="src/style.css" />
 </head>
 <body>
-  <!-- HEADER -->
-  <header>
-    <div class="wrap nav">
-      <div class="brand">
-        <span class="dot"></span>
-        <span>Bonang Matheba — The Blueprint</span>
-      </div>
-      <nav class="hide-sm">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#brands">Brands</a>
-        <a href="#fashion">Fashion</a>
-        <a href="#philanthropy">Initiatives</a>
-        <a href="#watch">Watch</a>
-        <a href="#timeline">Timeline</a>
-      </nav>
-      <a class="btn" href="#get-inspired">Get Inspired</a>
-    </div>
-  </header>
+
+  <!-- Loader -->
+  <div id="loader">
+    <video autoplay muted playsinline id="loaderVideo">
+      <source src="images/Loader.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="#home" class="navbar-brand"><em>Bonang Matheba</em></a>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn" href="#get-inspired">Get Inspired</a>
+  </nav>
 
   <main>
-    <!-- HERO -->
+    <!-- Hero -->
     <section class="wrap section hero" id="get-inspired">
       <div class="hero-grid">
         <div class="hero-copy">
           <h1>Demure. Driven. Distinct.</h1>
           <p>The Bonang Blueprint: Media icon, entrepreneur, philanthropist.</p>
           <div class="hero-cta">
-            <button class="btn-primary" onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">Explore Projects</button>
-            <button class="btn-ghost" onclick="document.querySelector('#watch').scrollIntoView({behavior:'smooth'})">Watch Interview</button>
+            <button class="btn-primary"
+              onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">
+              Explore Projects
+            </button>
+            <button class="btn-ghost"
+              onclick="document.querySelector('#watch').scrollIntoView({behavior:'smooth'})">
+              Watch Interview
+            </button>
           </div>
         </div>
         <div class="hero-img">
-          <img src="https://images.unsplash.com/photo-1521336582460-4f6e0b57d4a9?q=80&w=1600&auto=format&fit=crop" alt="Bonang Matheba portrait">
+          <img src="https://images.unsplash.com/photo-1521336582460-4f6e0b57d4a9?q=80&w=1600&auto=format&fit=crop"
+               alt="Bonang Matheba portrait" />
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="wrap section" id="about">
-      <h2>About Bonang Matheba</h2>
-      <p>Bonang Matheba is one of South Africa’s most influential media personalities, known for her television presenting, entrepreneurial ventures, and philanthropy.</p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="wrap section" id="projects">
-      <h2>Professional Projects</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Television Presenter</h3>
-          <p>Hosted various high-profile shows in South Africa including LIVE, Miss South Africa, and award events.</p>
+    <!-- About -->
+    <section id="about">
+      <h2 class="about-name">Pamela Mtanga</h2>
+      <div class="about-content">
+        
+        <!-- Left video -->
+        <div class="about-video-wrapper">
+          <video class="about-video" autoplay muted loop>
+            <source src="images/Pam.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
-        <div class="card">
-          <h3>Reality Series</h3>
-          <p>Produced and starred in <em>Being Bonang</em>, documenting her personal and professional journey.</p>
-        </div>
-        <div class="card">
-          <h3>Event Hosting</h3>
-          <p>International and national events, bringing elegance and professionalism to every stage.</p>
+        
+        <!-- Paragraph -->
+        <p>
+          <em>
+            Hi, I’m Pamela Mtanga — media personality, content creator, and storyteller passionate about connecting brands to audiences in meaningful ways. <br />
+            From hosting red-carpet events to creating engaging digital content, I’ve built a career on authenticity, versatility, and inspiring others. I’ve partnered with leading brands across beauty, fashion, lifestyle, and entertainment, delivering campaigns that truly resonate. <br />
+            Beyond the camera, I’m committed to empowering young women, showing that vision, consistency, and hard work can turn dreams into reality. This space showcases my latest work, collaborations, and projects — all vibrant, impactful, and unapologetically me.
+          </em>
+        </p>
+        
+        <!-- Right image -->
+        <div class="image-content">
+          <img src="images/download (6).jpeg"
+               alt="Pamela Mtanga with handbag"
+               class="section-image" />
         </div>
       </div>
     </section>
 
-    <!-- BRANDS -->
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <div class="portfolio-tabs">
+        <button class="tab-button active" data-tab="brand">Brand Collaborations</button>
+        <button class="tab-button" data-tab="creative">Awards</button>
+        <button class="tab-button" data-tab="media">Media & Hosting</button>
+      </div>
+
+      <div class="portfolio-slider" id="slider">
+        <div class="slider-item">
+          <h3>Adidas</h3>
+          <img src="images/Adidas.jpg" alt="Brand Collaboration 1" />
+          <p>Short description here.</p>
+        </div>
+        <div class="slider-item">
+          <h3>Sprite</h3>
+          <img src="images/Sprite.jpg" alt="Brand Collaboration 2" />
+          <p>Short description here.</p>
+        </div>
+        <div class="slider-item">
+          <h3>Kylie Cosmetics</h3>
+          <img src="images/Kylie.jpg" alt="Brand Collaboration 3" />
+          <p>Short description here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands -->
     <section class="wrap section" id="brands">
-      <h2>Business Ventures & Brands</h2>
+      <h2>Business Ventures</h2>
       <div class="cards">
         <div class="card">
           <h3>House of BNG</h3>
@@ -85,18 +135,24 @@
       </div>
     </section>
 
-    <!-- FASHION -->
-    <section class="wrap section" id="fashion">
-      <h2>Fashion & Style</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1600&auto=format&fit=crop" alt="Fashion showcase">
-          <p>Signature looks and style inspiration.</p>
-        </div>
-      </div>
-    </section>
+    <section class="wrap">
+  <h2>Fashion</h2>
 
-    <!-- PHILANTHROPY -->
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="carousel-slide"><img src="images/fashion1.jpg" alt="Fashion 1"></div>
+      <div class="carousel-slide"><img src="images/fashion2.jpg" alt="Fashion 2"></div>
+      <div class="carousel-slide"><img src="images/fashion3.jpg" alt="Fashion 3"></div>
+    </div>
+    <div class="carousel-buttons">
+      <button class="active"></button>
+      <button></button>
+      <button></button>
+    </div>
+  </div>
+</section>
+
+    <!-- Philanthropy -->
     <section class="wrap section" id="philanthropy">
       <h2>Initiatives & Impact</h2>
       <div class="cards">
@@ -111,40 +167,97 @@
       </div>
     </section>
 
-    <!-- WATCH / EMBEDS -->
+    <!-- Embeds -->
     <section class="wrap section" id="watch">
       <h2>Watch: Interviews & Highlights</h2>
       <div class="embed">
-        <iframe src="https://www.youtube.com/embed/4Yxk0kQ5Z8k" title="Bonang Matheba Interview" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/4Yxk0kQ5Z8k"
+                title="Bonang Matheba Interview"
+                allowfullscreen></iframe>
       </div>
     </section>
 
-    <!-- TIMELINE -->
+    <!-- Timeline -->
     <section class="wrap section" id="timeline">
       <h2>Career Milestones</h2>
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>Year</th><th>Milestone</th><th>Impact</th></tr>
+            <tr>
+              <th>Year</th>
+              <th>Milestone</th>
+              <th>Impact</th>
+            </tr>
           </thead>
           <tbody>
-            <tr><td>2013</td><td>Revlon International Ambassador</td><td>Global beauty representation from Africa.</td></tr>
-            <tr><td>2014</td><td>Hosted MTV EMA Pre-Show</td><td>First South African to host the pre-ceremony.</td></tr>
-            <tr><td>2017</td><td>Being Bonang</td><td>Reality series showcasing her personal & professional journey.</td></tr>
-            <tr><td>2019</td><td>House of BNG</td><td>Luxury lifestyle brand launch.</td></tr>
+            <tr>
+              <td>2013</td>
+              <td>Revlon International Ambassador</td>
+              <td>Global beauty representation from Africa.</td>
+            </tr>
+            <tr>
+              <td>2014</td>
+              <td>Hosted MTV EMA Pre-Show</td>
+              <td>First South African to host the pre-ceremony.</td>
+            </tr>
+            <tr>
+              <td>2017</td>
+              <td>Being Bonang</td>
+              <td>Reality series showcasing her personal & professional journey.</td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td>House of BNG</td>
+              <td>Luxury lifestyle brand launch.</td>
+            </tr>
           </tbody>
         </table>
       </div>
     </section>
-
   </main>
 
-  <footer>
-    <p>SheCodes Project • Fan-made educational page</p>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-container">
+      
+      <!-- Name -->
+      <div class="footer-name">
+        <h3>Pamela Ntanga</h3>
+      </div>
+
+      <!-- Socials -->
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/pamela_mtanga?igsh=MWFycHVvaWx5d2lyZQ==" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@pamela_mtanga?_t=ZS-8yu3LUwQSBU&_r=1" target="_blank">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://m.youtube.com/@pamela_mtanga?fbclid=PAY2xjawMMRotleHRuA2FlbQIxMAABpzfSLV0evIjZgqjZNPVm17usXrr_6q7NtTdoYloJsRgTyYnfNFfYSeQrn8Lp_aem_tYV6BYu6cHOJqNBe40qvSA" target="_blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+
+      <!-- Footer Nav -->
+      <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <!-- Bottom Note -->
+      <div class="footer-bottom">
+        &copy; 2025 Pamela Ntanga. All rights reserved.
+      </div>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Scripts -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="src/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
-
-```
